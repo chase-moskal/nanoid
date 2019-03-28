@@ -17,7 +17,7 @@
     "compile-esm": "rimraf dist-esm && babel ./ --out-dir dist-esm --plugins=transform-commonjs --ignore node_modules --ignore dist-esm --ignore coverage --ignore docs --ignore test",
     "docs": "jsdoc -d docs *.js async/*.js non-secure/*.js",
     "lint": "eslint-ci *.js {async,non-secure,test}/*.js test/{benchmark,alphabet,**/*.js}",
-    "test": "jest --coverage && yarn lint && size-limit && yarn spellcheck",
+    "test": "jest --coverage && yarn lint && yarn spellcheck",
     "start": "parcel serve test/demo/index.html -d test/demo/build --open"
   },
   "author": "Andrey Sitnik <andrey@sitnik.ru>",
